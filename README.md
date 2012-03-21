@@ -17,12 +17,10 @@ GET http://localhost:8183/entitiesB/11 -> OK<br/>
 ><pre>EntitiesServerResource<R extends Rep> extends ServerResource implements HasAddItem<R></pre> 
 
 >POST http://localhost:8183/entitiesA/
-><pre>
-<?xml version="1.0" encoding="UTF-8" ?>
-<ARep>
-  <code>10</code>
-</ARep>
-</pre>
+&lt;?xml version="1.0" encoding="UTF-8" ?&gt;
+&lt;ARep&gt;
+  &lt;code>10&lt;/code&gt;
+&lt;/ARep&gt;
 <b>-> KO, we have the NPE described below.</b>
 
 >POST http://localhost:8183/entitiesB/
@@ -97,5 +95,6 @@ WARNING: Exception or error caught in server resource<br/>
 <br/>        at java.util.concurrent.ThreadPoolExecutor$Worker.runTask(ThreadPoolExecutor.java:886)
 <br/>        at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:908)
 <br/>        at java.lang.Thread.run(Thread.java:662)
-Mar 21, 2012 7:07:20 PM org.restlet.engine.log.LogFilter afterHandle<br/>INFO: 2012-03-21	19:07:20	127.0.0.1	-	-	8183	POST	/entitiesB/	-	500	486	72	4	http://localhost:8183	Java/1.6.0_26	-
+<br/>Mar 21, 2012 7:07:20 PM org.restlet.engine.log.LogFilter afterHandle
+<br/>INFO: 2012-03-21	19:07:20	127.0.0.1	-	-	8183	POST	/entitiesB/	-	500	486	72	4	http://localhost:8183	Java/1.6.0_26	-
 
