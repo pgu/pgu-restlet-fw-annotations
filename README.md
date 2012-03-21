@@ -17,11 +17,11 @@ GET http://localhost:8183/entitiesB/11 -> OK<br/>
 ><pre>EntitiesServerResource<R extends Rep> extends ServerResource implements HasAddItem<R></pre> 
 
 >POST http://localhost:8183/entitiesA/
-&lt;?xml version="1.0" encoding="UTF-8" ?&gt;
-&lt;ARep&gt;
-  &lt;code>10&lt;/code&gt;
-&lt;/ARep&gt;
-<b>-> KO, we have the NPE described below.</b>
+<br/>&lt;?xml version="1.0" encoding="UTF-8" ?&gt;
+<br/>&lt;ARep&gt;
+<br/>  &lt;code>10&lt;/code&gt;
+<br/>&lt;/ARep&gt;
+<br/><b>-> KO, we have the NPE described below.</b>
 
 >POST http://localhost:8183/entitiesB/
 ><pre>
