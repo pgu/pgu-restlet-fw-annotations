@@ -18,10 +18,10 @@ GET http://localhost:8183/entitiesB/11 -> OK<br/>
 
 >POST http://localhost:8183/entitiesA/
 ><pre>
-<\?xml version="1.0" encoding="UTF-8" ?>
-<\ARep>
-  <\code>10<\/code>
-<\/ARep>
+<?xml version="1.0" encoding="UTF-8" ?>
+<ARep>
+  <code>10</code>
+</ARep>
 </pre>
 <b>-> KO, we have the NPE described below.</b>
 
@@ -43,59 +43,59 @@ GET http://localhost:8183/entitiesB/11 -> OK<br/>
 
 ---
 ####Here is the exception's stacktrace:<br/>
-Mar 21, 2012 7:07:20 PM org.restlet.resource.ServerResource doCatch
-WARNING: Exception or error caught in server resource
+Mar 21, 2012 7:07:20 PM org.restlet.resource.ServerResource doCatch<br/>
+WARNING: Exception or error caught in server resource<br/>
 <b>java.lang.NullPointerException</b>
->        at java.lang.Class.isAssignableFrom(Native Method)
->        at org.restlet.engine.converter.DefaultConverter.getVariants(DefaultConverter.java:104)
->        at org.restlet.engine.converter.ConverterUtils.getVariants(ConverterUtils.java:93)
->        at org.restlet.service.ConverterService.getVariants(ConverterService.java:116)
->        at org.restlet.engine.resource.AnnotationInfo.getRequestVariants(AnnotationInfo.java:401)
->        at org.restlet.engine.resource.AnnotationInfo.isCompatibleRequestEntity(AnnotationInfo.java:603)
->        at org.restlet.engine.resource.AnnotationInfo.isCompatible(AnnotationInfo.java:576)
->        at org.restlet.resource.ServerResource.getVariants(ServerResource.java:851)
->        at org.restlet.resource.ServerResource.getVariants(ServerResource.java:826)
->        at org.restlet.resource.ServerResource.doNegotiatedHandle(ServerResource.java:627)
->        at org.restlet.resource.ServerResource.doConditionalHandle(ServerResource.java:336)
->        at org.restlet.resource.ServerResource.handle(ServerResource.java:899)
->        at org.restlet.resource.Finder.handle(Finder.java:243)
->        at org.restlet.routing.Filter.doHandle(Filter.java:156)
->        at org.restlet.routing.Filter.handle(Filter.java:203)
->        at org.restlet.routing.Router.doHandle(Router.java:428)
->        at org.restlet.routing.Router.handle(Router.java:645)
->        at org.restlet.routing.Filter.doHandle(Filter.java:156)
->        at org.restlet.routing.Filter.handle(Filter.java:203)
->        at org.restlet.routing.Filter.doHandle(Filter.java:156)
->        at org.restlet.routing.Filter.handle(Filter.java:203)
->        at org.restlet.routing.Filter.doHandle(Filter.java:156)
->        at org.restlet.engine.application.StatusFilter.doHandle(StatusFilter.java:151)
->        at org.restlet.routing.Filter.handle(Filter.java:203)
->        at org.restlet.routing.Filter.doHandle(Filter.java:156)
->        at org.restlet.routing.Filter.handle(Filter.java:203)
->        at org.restlet.engine.CompositeHelper.handle(CompositeHelper.java:208)
->        at org.restlet.engine.application.ApplicationHelper.handle(ApplicationHelper.java:75)
->        at org.restlet.Application.handle(Application.java:377)
->        at org.restlet.routing.Filter.doHandle(Filter.java:156)
->        at org.restlet.routing.Filter.handle(Filter.java:203)
->        at org.restlet.routing.Router.doHandle(Router.java:428)
->        at org.restlet.routing.Router.handle(Router.java:645)
->        at org.restlet.routing.Filter.doHandle(Filter.java:156)
->        at org.restlet.routing.Filter.handle(Filter.java:203)
->        at org.restlet.routing.Router.doHandle(Router.java:428)
->        at org.restlet.routing.Router.handle(Router.java:645)
->        at org.restlet.routing.Filter.doHandle(Filter.java:156)
->        at org.restlet.engine.application.StatusFilter.doHandle(StatusFilter.java:151)
->        at org.restlet.routing.Filter.handle(Filter.java:203)
->        at org.restlet.routing.Filter.doHandle(Filter.java:156)
->        at org.restlet.routing.Filter.handle(Filter.java:203)
->        at org.restlet.engine.CompositeHelper.handle(CompositeHelper.java:208)
->        at org.restlet.Component.handle(Component.java:389)
->        at org.restlet.Server.handle(Server.java:513)
->        at org.restlet.engine.connector.ServerConnectionHelper.handle(ServerConnectionHelper.java:250)
->        at org.restlet.engine.connector.ServerConnectionHelper.doHandleInbound(ServerConnectionHelper.java:183)
->        at org.restlet.engine.connector.BaseHelper$2.run(BaseHelper.java:585)
->        at java.util.concurrent.ThreadPoolExecutor$Worker.runTask(ThreadPoolExecutor.java:886)
->        at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:908)
->        at java.lang.Thread.run(Thread.java:662)
+<br/>        at java.lang.Class.isAssignableFrom(Native Method)
+<br/>        at org.restlet.engine.converter.DefaultConverter.getVariants(DefaultConverter.java:104)
+<br/>        at org.restlet.engine.converter.ConverterUtils.getVariants(ConverterUtils.java:93)
+<br/>        at org.restlet.service.ConverterService.getVariants(ConverterService.java:116)
+<br/>        at org.restlet.engine.resource.AnnotationInfo.getRequestVariants(AnnotationInfo.java:401)
+<br/>        at org.restlet.engine.resource.AnnotationInfo.isCompatibleRequestEntity(AnnotationInfo.java:603)
+<br/>        at org.restlet.engine.resource.AnnotationInfo.isCompatible(AnnotationInfo.java:576)
+<br/>        at org.restlet.resource.ServerResource.getVariants(ServerResource.java:851)
+<br/>        at org.restlet.resource.ServerResource.getVariants(ServerResource.java:826)
+<br/>        at org.restlet.resource.ServerResource.doNegotiatedHandle(ServerResource.java:627)
+<br/>        at org.restlet.resource.ServerResource.doConditionalHandle(ServerResource.java:336)
+<br/>        at org.restlet.resource.ServerResource.handle(ServerResource.java:899)
+<br/>        at org.restlet.resource.Finder.handle(Finder.java:243)
+<br/>        at org.restlet.routing.Filter.doHandle(Filter.java:156)
+<br/>        at org.restlet.routing.Filter.handle(Filter.java:203)
+<br/>        at org.restlet.routing.Router.doHandle(Router.java:428)
+<br/>        at org.restlet.routing.Router.handle(Router.java:645)
+<br/>        at org.restlet.routing.Filter.doHandle(Filter.java:156)
+<br/>        at org.restlet.routing.Filter.handle(Filter.java:203)
+<br/>        at org.restlet.routing.Filter.doHandle(Filter.java:156)
+<br/>        at org.restlet.routing.Filter.handle(Filter.java:203)
+<br/>        at org.restlet.routing.Filter.doHandle(Filter.java:156)
+<br/>        at org.restlet.engine.application.StatusFilter.doHandle(StatusFilter.java:151)
+<br/>        at org.restlet.routing.Filter.handle(Filter.java:203)
+<br/>        at org.restlet.routing.Filter.doHandle(Filter.java:156)
+<br/>        at org.restlet.routing.Filter.handle(Filter.java:203)
+<br/>        at org.restlet.engine.CompositeHelper.handle(CompositeHelper.java:208)
+<br/>        at org.restlet.engine.application.ApplicationHelper.handle(ApplicationHelper.java:75)
+<br/>        at org.restlet.Application.handle(Application.java:377)
+<br/>        at org.restlet.routing.Filter.doHandle(Filter.java:156)
+<br/>        at org.restlet.routing.Filter.handle(Filter.java:203)
+<br/>        at org.restlet.routing.Router.doHandle(Router.java:428)
+<br/>        at org.restlet.routing.Router.handle(Router.java:645)
+<br/>        at org.restlet.routing.Filter.doHandle(Filter.java:156)
+<br/>        at org.restlet.routing.Filter.handle(Filter.java:203)
+<br/>        at org.restlet.routing.Router.doHandle(Router.java:428)
+<br/>        at org.restlet.routing.Router.handle(Router.java:645)
+<br/>        at org.restlet.routing.Filter.doHandle(Filter.java:156)
+<br/>        at org.restlet.engine.application.StatusFilter.doHandle(StatusFilter.java:151)
+<br/>        at org.restlet.routing.Filter.handle(Filter.java:203)
+<br/>        at org.restlet.routing.Filter.doHandle(Filter.java:156)
+<br/>        at org.restlet.routing.Filter.handle(Filter.java:203)
+<br/>        at org.restlet.engine.CompositeHelper.handle(CompositeHelper.java:208)
+<br/>        at org.restlet.Component.handle(Component.java:389)
+<br/>        at org.restlet.Server.handle(Server.java:513)
+<br/>        at org.restlet.engine.connector.ServerConnectionHelper.handle(ServerConnectionHelper.java:250)
+<br/>        at org.restlet.engine.connector.ServerConnectionHelper.doHandleInbound(ServerConnectionHelper.java:183)
+<br/>        at org.restlet.engine.connector.BaseHelper$2.run(BaseHelper.java:585)
+<br/>        at java.util.concurrent.ThreadPoolExecutor$Worker.runTask(ThreadPoolExecutor.java:886)
+<br/>        at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:908)
+<br/>        at java.lang.Thread.run(Thread.java:662)
 Mar 21, 2012 7:07:20 PM org.restlet.engine.log.LogFilter afterHandle<br/>INFO: 2012-03-21	19:07:20	127.0.0.1	-	-	8183	POST	/entitiesB/	-	500	486	72	4	http://localhost:8183	Java/1.6.0_26	-
 
