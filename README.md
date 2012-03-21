@@ -19,18 +19,16 @@ GET http://localhost:8183/entitiesB/11 -> OK<br/>
 >POST http://localhost:8183/entitiesA/
 <br/>&lt;?xml version="1.0" encoding="UTF-8" ?&gt;
 <br/>&lt;ARep&gt;
-<br/>  &lt;code>10&lt;/code&gt;
+<br/>  &lt;code&gt;10&lt;/code&gt;
 <br/>&lt;/ARep&gt;
 <br/><b>-> KO, we have the NPE described below.</b>
 
 >POST http://localhost:8183/entitiesB/
-><pre>
-<\?xml version="1.0" encoding="UTF-8" ?>
-<\BRep>
-  <\code>10</code>
-<\/BRep>
-</pre>
-<b>-> KO</b>
+<br/>&lt;?xml version="1.0" encoding="UTF-8" ?&gt;
+<br/>&lt;BRep&gt;
+<br/>  &lt;code&gt;10&lt;/code&gt;
+<br/>&lt;/BRep&gt;
+<br/><b>-> KO</b>
 
 ####EntitiesServerResource: If we begin to remove the interfaces..<br/>
 ><pre>EntitiesServerResource<R extends Rep> extends ServerResource 
