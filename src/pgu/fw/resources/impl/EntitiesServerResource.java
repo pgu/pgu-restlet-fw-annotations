@@ -3,8 +3,9 @@ package pgu.fw.resources.impl;
 import org.restlet.resource.ServerResource;
 
 import pgu.fw.rep.Rep;
+import pgu.fw.resources.HasAddItem;
 
-public abstract class EntitiesServerResource<R extends Rep> extends ServerResource {
+public abstract class EntitiesServerResource<R extends Rep> extends ServerResource implements HasAddItem<R> {
     //    implements HasAddItem<R> 
 
     private static int counter = 0;
