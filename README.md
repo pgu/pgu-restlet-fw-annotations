@@ -1,6 +1,7 @@
 ## Update 29th of March 2012
 > Restlet 2.1 fixes this issue :-)
 
+## Issue with interfaces and generics
 ### Here is the sample application with which you can reproduce the NPE:
 
 The context is :<br/> 
